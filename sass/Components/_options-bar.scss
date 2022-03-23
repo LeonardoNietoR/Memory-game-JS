@@ -1,0 +1,150 @@
+.container-options {
+  background-color: $color-blue-3;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  &__timer {
+    width: 13rem;
+    height: 13rem;
+    color: $color-grey-dark;
+    text-align: center;
+    border: 1px solid $color-grey-dark;
+    display: flex;
+    flex-direction: column;
+    //  background-color: rgb(127, 172, 255);
+
+    .timer-wrapper {
+      margin: 0 auto;
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+
+    &--minutes,
+    &--seconds,
+    &--colon {
+      top: 0;
+      position: absolute;
+      min-width: 50px;
+      font-size: 4.3rem;
+    }
+    &--minutes {
+      left: 7px;
+      text-align: right;
+    }
+    &--colon {
+      left: 50%;
+      transform: translate(-50%);
+      text-align: center;
+    }
+    &--seconds {
+      right: 7px;
+      text-align: justify;
+    }
+
+    &--button {
+      padding: 1rem;
+      background-color: $color-blue-2;
+
+      &-anchor {
+        display: inline-block;
+        width: 2.2rem;
+        height: 2.2rem;
+        position: relative;
+        font-size: 2rem;
+        text-decoration: none;
+        border: 2px solid $color-grey-dark;
+        border-radius: 50%;
+      }
+
+      &-name {
+        font-size: 2rem;
+        line-height: 1.8rem;
+        color: $color-grey-dark;
+        .timer--button-name {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__score {
+    width: 13rem;
+    border: 1px solid $color-grey-dark;
+
+    color: $color-blue-4;
+    text-align: center;
+
+    &--title {
+      font-size: 2.5rem;
+    }
+    &--counter {
+      font-size: 3.8rem;
+      margin-left: 0.5rem;
+    }
+  }
+
+  &__amount-cards {
+    width: 80%;
+    background-color: $color-blue-2;
+    border: 1px solid $color-grey-dark;
+
+    text-align: center;
+    padding: 1.5rem;
+
+    span {
+      font-size: 2rem;
+      color: $color-white-1;
+    }
+
+    a {
+      display: block;
+      font-size: 2rem;
+      color: $color-grey-dark;
+      text-decoration: none;
+      border: 1px solid $color-grey-dark;
+      border-radius: 4px;
+      margin: 1.5rem 0;
+      padding: 0.2rem 0;
+
+      // &:focus {
+      //     transform: scale(0.97);
+      //   color: $color-white-1;
+      //   border-color: $color-white-1;
+      // }
+
+      &:hover {
+        color: $color-white-1;
+        border-color: $color-white-1;
+      }
+    }
+  }
+}
+
+// This ".checked" is added to the "anchor-button" with JS when focused.
+.button-timer-on {
+  border: 2px solid $color-white-1;
+  background-color: $color-white-1;
+  box-shadow: 0 0 0.5rem $color-white-1;
+}
+
+.button-timer-red {
+  border: 2px solid $color-red-2;
+  background-color: $color-red-2;
+  box-shadow: 0 0 0.3rem $color-red-2;
+}
+
+.text-timer-on {
+  color: $color-white-1;
+}
+
+.text-timer-red {
+  color: $color-red-2;
+}
+
+.box-timer-red {
+  border: 2px solid $color-red-2;
+}

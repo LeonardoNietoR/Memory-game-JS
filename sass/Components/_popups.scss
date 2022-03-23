@@ -1,0 +1,77 @@
+.container-popups {
+  background-color: rgba($color-black, 0.5);
+  width: 90vw;
+  height: 90vh;
+  z-index: 1;
+
+  .message {
+    width: 50rem;
+    height: 20rem;
+    padding: 1rem 4rem;
+    //  letter-spacing: 0.2rem;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  .text {
+    line-height: 2.6rem;
+  }
+  .buttons {
+    background-color: none;
+    margin-top: 1.5rem;
+    a {
+      font-size: 2rem;
+      text-decoration: none;
+      padding: 0.7rem 2rem;
+      margin: 0 2rem;
+      border-radius: 10px;
+    }
+  }
+
+  &__win-message {
+    background-color: $color-green;
+
+    &--text {
+      font-size: 3rem;
+      color: $color-white-1;
+    }
+
+    &--buttons {
+      a {
+        color: yellow;
+        border: 2px solid $color-white-1;
+      }
+    }
+  }
+
+  &__timer-message {
+    background-color: $color-yellow;
+    &--text {
+      font-size: 2.2rem;
+      color: $color-black;
+    }
+
+    &--buttons {
+      a {
+        background-color: $color-blue-3;
+        color: $color-white-1;
+        border: 2px solid $color-grey-dark;
+      }
+    }
+  }
+
+  &__timesUp-message {
+    background-color: $color-red-1;
+    &--text {
+      font-size: 2.2rem;
+      color: $color-white-1;
+    }
+    &--buttons {
+      a {
+        background-color: $color-blue-3;
+        color: $color-white-1;
+        border: 2px solid $color-grey-dark;
+      }
+    }
+  }
+}

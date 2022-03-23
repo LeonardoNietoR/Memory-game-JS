@@ -1,0 +1,71 @@
+.container-table {
+  background-color: $color-blue-2;
+  position: relative;
+  cursor: pointer;
+  overflow: auto;
+
+  &__frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgba($color-blue-1, 0.2);
+    transform: translate(-50%, -50%);
+    display: grid;
+
+    // TEMPORARY FOR TESTS ---------- 4 CARDS
+    &--4-cards {
+      width: calc(($card-height-width * 2) + ($table-gaps * 1));
+      height: calc(($card-height-width * 2)+ ($table-gaps * 1));
+      grid-template: repeat(2, $card-height-width) / repeat(
+          2,
+          $card-height-width
+        );
+      grid-column-gap: $table-gaps;
+      grid-row-gap: $table-gaps;
+    }
+
+    &--12-cards {
+      width: calc(($card-height-width * 4) + ($table-gaps * 3));
+      height: calc(($card-height-width * 3)+ ($table-gaps * 2));
+      grid-template: repeat(3, $card-height-width) / repeat(
+          4,
+          $card-height-width
+        );
+      grid-column-gap: $table-gaps;
+      grid-row-gap: $table-gaps;
+    }
+
+    &--20-cards {
+      width: calc(($card-height-width * 5) + ($table-gaps * 4));
+      height: calc(($card-height-width * 4)+ ($table-gaps * 3));
+      grid-template: repeat(4, $card-height-width) / repeat(
+          5,
+          $card-height-width
+        );
+      grid-column-gap: $table-gaps;
+      grid-row-gap: $table-gaps;
+    }
+
+    &--28-cards {
+      width: calc(($card-height-width * 7) + ($table-gaps * 4));
+      height: calc(($card-height-width * 4)+ ($table-gaps * 3));
+      grid-template: repeat(4, $card-height-width) / repeat(
+          7,
+          $card-height-width
+        );
+      grid-column-gap: $table-gaps;
+      grid-row-gap: $table-gaps;
+    }
+
+    &--40-cards {
+      width: calc(($card-height-width-40 * 8) + ($table-gaps * 7));
+      height: calc(($card-height-width-40 * 5)+ ($table-gaps * 4));
+      grid-template: repeat(5, $card-height-width-40) / repeat(
+          8,
+          $card-height-width-40
+        );
+      grid-column-gap: $table-gaps;
+      grid-row-gap: $table-gaps;
+    }
+  }
+}

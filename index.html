@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script type="module" defer src="script.js"></script>
+    <!-- <script type="module" defer src="./Scripts/_controller.js"></script> -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/44ce5e735f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <div class="container-initial-screen">
+        <div class="container-initial-screen__image"></div>
+        <div class="container-initial-screen__title">
+          <h1>Memory game</h1>
+        </div>
+        <div class="container-initial-screen__start">
+          <a href="" class="btn-start">Start</a>
+        </div>
+      </div>
+      <!-- Container table ---------------------------- -->
+      <div class="container-table">
+        <!-- <div class="container-table__frame container-table__frame--12-cards">
+          <div class="card">
+            <div class="card__side card__side--front"></div>
+            <div class="card__side card__side--back">
+              <i class="fas inside fa-dog"></i>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__side card__side--front"></div>
+            <div class="card__side card__side--back">
+              <i class="fas inside fa-dog"></i>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__side card__side--front"></div>
+            <div class="card__side card__side--back">
+              <i class="fas inside fa-dog"></i>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__side card__side--front"></div>
+            <div class="card__side card__side--back">
+              <i class="fas inside fa-dog"></i>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__side card__side--front"></div>
+            <div class="card__side card__side--back">
+              <i class="fas inside fa-dog"></i>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__side card__side--front"></div>
+            <div class="card__side card__side--back">
+              <i class="fas inside fa-dog"></i>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__side card__side--front"></div>
+            <div class="card__side card__side--back">
+              <i class="fas inside fa-dog"></i>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__side card__side--front"></div>
+            <div class="card__side card__side--back">
+              <i class="fas inside fa-dog"></i>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__side card__side--front"></div>
+            <div class="card__side card__side--back">
+              <i class="fas inside fa-dog"></i>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__side card__side--front"></div>
+            <div class="card__side card__side--back">
+              <i class="fas inside fa-dog"></i>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__side card__side--front"></div>
+            <div class="card__side card__side--back">
+              <i class="fas inside fa-dog"></i>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__side card__side--front"></div>
+            <div class="card__side card__side--back">
+              <i class="fas inside fa-dog"></i>
+            </div>
+          </div>
+        </div> -->
+        <!-- hasta aqui 12 CARDS -->
+      </div>
+      <!-- Container options---------------- -->
+
+      <div class="container-options">
+        <div class="container-options__timer">
+          <div class="timer-wrapper">
+            <span class="container-options__timer--minutes">00</span>
+            <span class="container-options__timer--colon">:</span>
+            <span class="container-options__timer--seconds">00</span>
+          </div>
+
+          <div class="container-options__timer--button">
+            <a href="" class="container-options__timer--button-anchor"></a>
+
+            <div class="container-options__timer--button-name">
+              <span class="timer--button-name">timer off</span>
+            </div>
+          </div>
+        </div>
+        <div class="container-options__score">
+          <span class="container-options__score--title">Score:</span
+          ><span class="container-options__score--counter">00</span>
+        </div>
+        <div class="container-options__amount-cards">
+          <span>Play with:</span>
+          <a class="btn-amount btn-12" data-btn-amount="12" href="">12 Cards</a>
+          <a class="btn-amount btn-20" data-btn-amount="20" href="">20 Cards</a>
+          <a class="btn-amount btn-28" data-btn-amount="28" href="">28 Cards</a>
+          <a class="btn-amount btn-40" data-btn-amount="40" href="">40 Cards</a>
+        </div>
+      </div>
+      <!-- Container pop-ups -------------------------- -->
+      <div class="container-popups position-ab hide">
+        <div
+          class="container-popups__win-message message hide position-ab fl-col"
+        >
+          <span class="container-popups__win-message--text text"
+            >Congratulations!!! level completed.
+          </span>
+          <div class="container-popups__win-message--buttons buttons">
+            <a href="" class="btn-play-again">Play again</a>
+            <a href="" class="btn-next-level">Next level</a>
+          </div>
+        </div>
+        <div
+          class="container-popups__timer-message message hide position-ab fl-col"
+        >
+          <span class="container-popups__timer-message--text text"
+            >If you turn on the timer you will restart the current level.
+          </span>
+          <div class="container-popups__timer-message--buttons buttons">
+            <a href="" class="btn-continue">Continue</a>
+            <a href="" class="btn-cancel">Cancel</a>
+          </div>
+        </div>
+        <div
+          class="container-popups__timesUp-message message hide position-ab fl-col"
+        >
+          <span class="container-popups__timesUp-message--text text"
+            >Time´s up!!!
+          </span>
+          <div class="container-popups__timesUp-message--buttons buttons">
+            <a href="" class="btn-restart">Restart</a>
+            <a href="" class="btn-exit">Exit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
